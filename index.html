@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVELSAUTO — Премиальные автомобили</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+    }
+    
+    header .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin-left: 20px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .sign-in {
+        padding: 10px 20px;
+        background-color: #555;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    main {
+        padding: 40px;
+    }
+    
+    .hero {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+        color: #e0e0e0;
+    }
+    
+    .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #bbb;
+    }
+    
+    .cta {
+        padding: 15px 30px;
+        background-color: #444;
+        color: white;
+        border: 2px solid #666;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+    
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .feature-item {
+        background-color: #1a1a1a;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid #666;
+        transition: transform 0.3s;
+    }
+    
+    .feature-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .feature-item a {
+        color: #00b4d8;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .feature-item a:hover {
+        color: #90e0ef;
+    }
+
+    .feature-item:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LEVELS_AUTO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Модели</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class="sign-in">Войти</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать в LEVELS_AUTO</h1>
+            <p>Премиальные автомобили для истинных ценителей</p>
+            <button class="cta">Узнать больше</button>
+        </section>
+        <section class="features">
+            <div class="feature-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCrgJg588IRUUFf_0_bZ8ZxxSPD9AlJSOSQ&s" alt="Bentley Batur">
+                <h2>Bentley Batur</h2>
+                <p>Элегантность и мощь. <a href="https://www.bentleymotors.com/" target="_blank">Перейти на сайт Bentley</a></p>
+            </div>
+            <div class="feature-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLWBznrwBaJ0GewSxertw7gOQvDqlxpRaD5g&s" alt="Rolls-Royce Ghost">
+                <h2>Rolls-Royce Ghost</h2>
+                <p>Неизменный стандарт роскоши. <a href="https://www.rolls-roycemotorcars.com/" target="_blank">Перейти на сайт Rolls-Royce</a></p>
+            </div>
+            <div class="feature-item">
+                <img src="data:image/jpeg;base64,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" alt="Porsche 911 Turbo S">
+                <h2>Porsche 911 Turbo S</h2>
+                <p>Скорость и стиль. <a href="https://www.porsche.com/" target="_blank">Перейти на сайт Porsche</a></p>
+            </div>
+            <div class="feature-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaN69sMM18fqi029m01CmWdX7Ku4ZwSSqfpg&s" alt="Bugatti Chiron">
+                <h2>Bugatti Chiron</h2>
+                <p>Абсолютная мощь. <a href="https://www.bugatti.com/" target="_blank">Перейти на сайт Bugatti</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
